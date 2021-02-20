@@ -179,7 +179,7 @@ bam.BlastRadius = 6
 wait(1.75)
 bam:Destroy()
 bam1:Destroy()
-TextLabel.Text = teck.Name
+TextLabel.Text = teck
 end)
 
 btn2.MouseButton1Down:connect(function()
@@ -215,7 +215,7 @@ TextLabel.Text = "Hello, world"
 wait(tint)
 TextLabel.Text = "Hello, world."
 wait(2)
-TextLabel.Text = teck.Name
+TextLabel.Text = teck
 end)
 
 an = coroutine.create(function()
@@ -756,12 +756,16 @@ end)
 coroutine.resume(ruin2)
 
 ploud = coroutine.create(function()
-while wait(0.01) do
+while true do
 p.Size = vt(2.75,0.1,2.75)
 p2.Size = vt(2.90,0.05,2.90)
 wait(0.01)
+p.Size = vt(3,0.1,3)
+p2.Size = vt(3.15,0.05,3.15)
+wait(0.01)
 p.Size = vt(2.5,0.1,2.5)
 p2.Size = vt(2.65,0.05,2.65)
+wait(0.01)
 end
 end)
 coroutine.resume(ploud)
