@@ -12,8 +12,7 @@ so.TimePosition = 75
 
 tint = 0.001
 
-local teck = it("Folder",workspace)
-teck.Name = "CURSED V1.1.2 by himoresore"
+teck = "CURSED V1.1.2 by himoresore"
 
 local BillboardGui = Instance.new("BillboardGui")
 BillboardGui.Parent = me.Head
@@ -767,5 +766,5 @@ end
 end)
 
 wait(4)
-teck.Name = "CURSED V1.1.2"
-TextLabel.Text = teck.Name
+teck = "CURSED V1.1.2"
+TextLabel.Text = teck
