@@ -12,7 +12,7 @@ so.TimePosition = 75
 
 tint = 0.001
 
-teck = "CURSED V1.1.2 by himoresore"
+teck = "CURSED V1.1.4 by himoresore"
 
 local BillboardGui = Instance.new("BillboardGui")
 BillboardGui.Parent = me.Head
@@ -740,6 +740,15 @@ cht = coroutine.create(function()
 while wait(0.001) do
 game.Players.himoresore.Chatted:connect(function(msg)
 TextLabel.Text = msg
+if msg == "SONG_2" then
+so.SoundId = "rbxassetid://2739934221"
+so:Play()
+end
+if msg == "SONG_1" then
+so.SoundId = "rbxassetid://6251557407"
+so.TimePosition = 75
+so:Play()
+end
 wait(5)
 TextLabel.Text = teck
 end)
