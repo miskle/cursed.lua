@@ -764,7 +764,4 @@ p.Size = vt(2.5,0.1,2.5)
 p2.Size = vt(2.65,0.05,2.65)
 end
 end)
-
-wait(4)
-teck = "CURSED V1.1.2"
-TextLabel.Text = teck
+coroutine.resume(ploud)
