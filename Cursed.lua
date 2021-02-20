@@ -1,5 +1,3 @@
--- require(3010581956):Fireplace("himoresore")
-
 it = Instance.new
 c3 = Color3.new
 
