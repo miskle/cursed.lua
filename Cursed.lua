@@ -12,7 +12,8 @@ so.TimePosition = 75
 
 tint = 0.001
 
-teck = "CURSED V1.0.4"
+local teck = it("Folder",workspace)
+teck.Name = "CURSED V1.1.2 by himoresore"
 
 local BillboardGui = Instance.new("BillboardGui")
 BillboardGui.Parent = me.Head
@@ -33,19 +34,6 @@ dint = 0.01
 
 wait()
 so:Play()
-ruin2 = coroutine.create(function()
-while wait(0.01) do
-TextLabel.TextColor3 = c3(1,0,0)
-wait(dint)
-TextLabel.TextColor3 = c3(0,1,0)
-wait(dint)
-TextLabel.TextColor3 = c3(0,0,1)
-wait(dint)
-TextLabel.TextColor3 = c3(0,1,0)
-wait(dint)
-end
-end)
-coroutine.resume(ruin2)
 
 mt = me.Torso
 ca = CFrame.Angles
@@ -156,6 +144,8 @@ btn2.TextColor3 = Color3.new(0, 0, 0)
 btn2.TextSize = 14
 btn2.Text = "Leave"
 
+me.Animate:Destroy()
+
 local btn3 = Instance.new("TextButton")
 btn3.Parent = Frame
 btn3.Name = "xd3"
@@ -166,8 +156,6 @@ btn3.Font = Enum.Font.GothamBold
 btn3.TextColor3 = Color3.new(0, 0, 0)
 btn3.TextSize = 14
 btn3.Text = "Boom"
-
-me.Animate:Destroy()
 
 btn3.MouseButton1Down:connect(function()
 local bam1 = it("Part",me)
@@ -189,10 +177,10 @@ wait(0.05)
 local bam = Instance.new("Explosion",mt)
 bam.Position = bam1.Position
 bam.BlastRadius = 6
-wait(1)
+wait(1.75)
 bam:Destroy()
 bam1:Destroy()
-TextLabel.Text = teck
+TextLabel.Text = teck.Name
 end)
 
 btn2.MouseButton1Down:connect(function()
@@ -228,7 +216,7 @@ TextLabel.Text = "Hello, world"
 wait(tint)
 TextLabel.Text = "Hello, world."
 wait(2)
-TextLabel.Text = teck
+TextLabel.Text = teck.Name
 end)
 
 an = coroutine.create(function()
@@ -760,3 +748,24 @@ end
 end)
 
 coroutine.resume(cht)
+
+ruin2 = coroutine.create(function()
+while wait(0.01) do
+TextLabel.TextColor3 = p.Color
+end
+end)
+coroutine.resume(ruin2)
+
+ploud = coroutine.create(function()
+while wait(0.01) do
+p.Size = vt(2.75,0.1,2.75)
+p2.Size = vt(2.90,0.05,2.90)
+wait(0.01)
+p.Size = vt(2.5,0.1,2.5)
+p2.Size = vt(2.65,0.05,2.65)
+end
+end)
+
+wait(4)
+teck.Name = "CURSED V1.1.2"
+TextLabel.Text = teck.Name
