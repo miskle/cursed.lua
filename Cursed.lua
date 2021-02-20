@@ -12,7 +12,7 @@ so.TimePosition = 75
 
 tint = 0.001
 
-teck = "CURSED V1.1.4 by himoresore"
+teck = "CURSED V1.2.1 by himoresore"
 
 local BillboardGui = Instance.new("BillboardGui")
 BillboardGui.Parent = me.Head
@@ -153,14 +153,17 @@ btn3.BackgroundColor3 = Color3.new(1, 1, 1)
 btn3.Size = UDim2.new(0, 100, 0, 25)
 btn3.Font = Enum.Font.GothamBold
 btn3.TextColor3 = Color3.new(0, 0, 0)
-btn3.TextSize = 14
-btn3.Text = "Boom"
+btn3.TextSize = 10
+btn3.Text = "Death Trap"
 
 btn3.MouseButton1Down:connect(function()
 local bam1 = it("Part",me)
 bam1.Anchored = true
 bam1.Position = me.Torso.Position
 bam1.CanCollide = false
+bam1.Transparency = 1
+wait(1.75)
+bam1.Transparency = 0
 bam1.Size = vt(2,2,2)
 bam1.Color = c3(1,0,0)
 bam1.Material = Enum.Material.Neon
@@ -169,17 +172,15 @@ wait(tint)
 bam1.Size = vt(4,4,4)
 wait(tint)
 bam1.Size = vt(6,6,6)
-TextLabel.Text = "K"
-wait(tint)
-TextLabel.Text = "K O"
-wait(0.05)
+bam1.Touched:Connect(function(partTouching)
 local bam = Instance.new("Explosion",mt)
 bam.Position = bam1.Position
 bam.BlastRadius = 6
-wait(1.75)
+wait(0.1)
 bam:Destroy()
 bam1:Destroy()
 TextLabel.Text = teck
+end)
 end)
 
 btn2.MouseButton1Down:connect(function()
@@ -754,18 +755,3 @@ TextLabel.TextColor3 = p.Color
 end
 end)
 coroutine.resume(ruin2)
-
-ploud = coroutine.create(function()
-while true do
-p.Size = vt(2.75,0.1,2.75)
-p2.Size = vt(2.90,0.05,2.90)
-wait(0.01)
-p.Size = vt(3,0.1,3)
-p2.Size = vt(3.15,0.05,3.15)
-wait(0.01)
-p.Size = vt(2.5,0.1,2.5)
-p2.Size = vt(2.65,0.05,2.65)
-wait(0.01)
-end
-end)
-coroutine.resume(ploud)
