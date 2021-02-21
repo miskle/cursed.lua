@@ -6,7 +6,7 @@ local so = it("Sound")
 so.Parent = me.Torso
 so.SoundId = "rbxassetid://6251557407"
 so.Pitch = 1
-so.Volume = 10
+so.Volume = 2.5
 so.Looped = true
 so.TimePosition = 75
 
